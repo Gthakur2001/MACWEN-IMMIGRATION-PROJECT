@@ -3392,3 +3392,11 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: zoomOutUp;
   animation-name: zoomOutUp;
 }
+.map_style{
+  position: relative;
+
+}
+.mapcontainer_Style{
+  position:absolute;
+  inset: 0px;
+}

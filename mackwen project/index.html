@@ -66,7 +66,7 @@
 
                 <div class="container clearfix">
 
-                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+                    <div id="primary-menu-trigger"><i class="material-icons">menu</i></div>
 
                     <!-- Logo
                     ============================================= -->
@@ -194,6 +194,7 @@
 									</div>
 
 								</div>
+                            
 
 								<div class="col_full nobottommargin">
 
@@ -696,86 +697,103 @@
 
                     <!-- Contact Form
                     ============================================= -->
-                    <form class="nobottommargin" id="template-contactform" name="template-contactform" action="https://script.google.com/macros/s/AKfycby0ZtsumDLIVxUMqiq2QsPMGYK_ZM7W4dYkM4OzXUhGHBW0gjE/exec" method="get">
+                 
+                        
+                           
 
-                        <div class="form-process"></div>
+                        <form class="nobottommargin" id="template-contactform" name="template-contactform" action="https://formsubmit.co/8a365a7830458ccae574798bf7bae549" method="POST" novalidate="novalidate">
+                            <div class="form-process"></div>
+    
+                            <div class="col_full">
+                                <label for="template-contactform-name">Name <small>*</small></label>
+                                <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+                            </div>
+    
+                            <div class="col_full">
+                                <label for="template-contactform-email">Email <small>*</small></label>
+                                <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
+                            </div>
+    
+                            <div class="clear"></div>
+    
+                            <div class="col_full">
+                                <label for="template-contactform-phone">Phone</label>
+                                <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
+                            </div>
+    
+                            <div class="col_full">
+                                <label for="template-contactform-service">I am A</label>
+                                <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
+                                    <option value="">-- Select One --</option>
+                                    <option value="Prospective Student">Prospective Student</option>
+                                    <option value="ESL School Representative">ESL School Representative</option>
+                                    <option value="University or College Representative">University or College Representative</option>
+                                    <option value="Homestay Provider">Homestay Provider</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+    
+                            <div class="clear"></div>
+    
+                            <div class="col_full">
+                                <label for="template-contactform-subject">Subject</label>
+                                <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="sm-form-control" />
+                            </div>
+    
+                            <div class="col_full">
+                                <label for="template-contactform-message">Message <small>*</small></label>
+                                <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+                            </div>
+    
+                            <div class="col_full hidden">
+                                <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                            </div>
+    
+                            <div class="col_full">
+                                <button class="button button-rounded button-reveal button-large tright" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit"><i class="icon-email2"></i><span>Send Message</span></button>
+                            </div>
+    
+                        </form>
 
-                        <div class="col_full">
-                            <label for="template-contactform-name">Name <small>*</small></label>
-                            <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
-                        </div>
+               
+                   
 
-                        <div class="col_full">
-                            <label for="template-contactform-email">Email <small>*</small></label>
-                            <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
-                        </div>
-
-                        <div class="clear"></div>
-
-                        <div class="col_full">
-                            <label for="template-contactform-phone">Phone</label>
-                            <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col_full">
-                            <label for="template-contactform-service">I am A</label>
-                            <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
-                                <option value="">-- Select One --</option>
-                                <option value="Prospective Student">Prospective Student</option>
-                                <option value="ESL School Representative">ESL School Representative</option>
-                                <option value="University or College Representative">University or College Representative</option>
-                                <option value="Homestay Provider">Homestay Provider</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="clear"></div>
-
-                        <div class="col_full">
-                            <label for="template-contactform-subject">Subject</label>
-                            <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col_full">
-                            <label for="template-contactform-message">Message <small>*</small></label>
-                            <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
-                        </div>
-
-                        <div class="col_full hidden">
-                            <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col_full">
-                            <button class="button button-rounded button-reveal button-large tright" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit"><i class="icon-email2"></i><span>Send Message</span></button>
-                        </div>
-
-                    </form>
-
-                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                    <script type="text/javascript">
                         $("#template-contactform").validate({
                             submitHandler: function(form) {
                                 $('.form-process').fadeIn();
                                 
-                                $.ajaxSetup({
-                                    jsonp: 'prefix',
-                                    dataType: 'jsonp'
-                                });
-
+                                // $.ajaxSetup({
+                                //     jsonp: 'prefix',
+                                //     dataType: 'jsonp'
+                                // });
+                                
                                 $(form).ajaxSubmit({
                                     target: '#contact-form-result',
+                                    
                                     success: function() {
                                         $('.form-process').fadeOut();
                                         $('#template-contactform').find('.sm-form-control').val('');
+                                        
                                         $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
                                         SEMICOLON.widget.notifications($('#contact-form-result'));
-                                    }
+                                      
+                                    },
+                                    error: function (xhr, status, error) {
+                                    console.error("Form submission failed:", status, error);
+                                    $('.form-process').fadeOut();
+                                    // Display an error message or take other actions as needed
+                                    $('#contact-form-result').html('Form submission failed. Please try again later.');
+                                  
+          }
                                 });
                             }
                         });
                     </script>
 
                 </div><!-- Contact Form Overlay End -->
-
+  
             </div>
 
             <!-- Google Map
@@ -783,23 +801,23 @@
             <section id="google-map" class="gmap"></section>
 
             <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQhlizNrPiQetEZ9vuVbeczdMlPiy1sR4"></script>
-            <script type="text/javascript" src="js/jquery.gmap.js"></script>
+            <script type="text/javascript" src="js/jquery-gmap.js"></script>
 
             <script type="text/javascript">
 
                 $('#google-map').gMap({
 
                     //address: 'Toronto, Canada',
-                    latitude: 43.653704,
-                    longitude: -79.381515,
+                    latitude: 30.081086826438693, 
+                    longitude: 78.3407903016755,
                     maptype: 'ROADMAP',
                     zoom: 14,
                     styles: [{"featureType":"road.highway","stylers":[{"lightness":1},{"hue":"#ff4400"},{"gamma":0.68},{"saturation":-32},{"visibility":"on"}]},{"featureType":"road.arterial","stylers":[{"hue":"#ff4d00"},{"visibility":"on"},{"lightness":-17},{"gamma":1.2},{"saturation":7}]},{"featureType":"road.local","stylers":[{"lightness":-5},{"saturation":-100}]},{"featureType":"landscape.man_made","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"on"},{"saturation":-100},{"gamma":1.22}]},{"featureType":"landscape.natural","stylers":[{"saturation":-100},{"gamma":2}]},{"featureType":"water","stylers":[{"hue":"#003bff"},{"gamma":1.45}]},{"featureType":"transit","stylers":[{"saturation":-100}]}],
                     markers: [
                         {
                             //address: "2 Bloor St. East, Toronto",
-                            latitude: 43.6709824,
-                            longitude: -79.3864338,
+                            latitude: 30.09024823802541, 
+                            longitude:78.28654428997797,
                             html: '<div style="width: 300px;"><h4 style="margin-bottom: 8px;">Hi, we\'re <span>ISRC</span></h4><p class="nobottommargin">Our mission is to help educational institutions <strong>recruit great students</strong>.</p></div>',
                             icon: {
                                 image: "images/icons/map-icon-red.png",
@@ -819,7 +837,7 @@
                     }
 
                 });
-
+               
             </script><!-- Google Map End -->
 
         </section><!-- Contact Form & Map Overlay Section End -->
