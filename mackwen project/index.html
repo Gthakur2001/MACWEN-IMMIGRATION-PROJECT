@@ -6,6 +6,7 @@
     <meta name="author" content="ISRC" />
     <meta name="keywords" content="student,agency,study abroad,ISRC">
     <meta name="description" content="Helping students across the globe in getting an education in Canada">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Stylesheets
     ============================================= -->
@@ -33,6 +34,7 @@
     ============================================= -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
+    
 
     <!-- Document Title
     ============================================= -->
@@ -701,7 +703,7 @@
                         
                            
 
-                        <form class="nobottommargin" id="template-contactform" name="template-contactform" action="https://formsubmit.co/8a365a7830458ccae574798bf7bae549" method="POST" novalidate="novalidate">
+                        <form class="nobottommargin" id="template-contactform" name="template-contactform" action="https://formsubmit.co/f1d521d85b994051a6ded69f8dbf3fad" method="POST" novalidate="novalidate">
                             <div class="form-process"></div>
     
                             <div class="col_full">
@@ -758,39 +760,45 @@
                
                    
 
-                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                    <script type="text/javascript">
-                        $("#template-contactform").validate({
-                            submitHandler: function(form) {
+                   
+                        <script type="text/javascript">
+                            $("#template-contactform").validate({
+                              submitHandler: async function(form) {
                                 $('.form-process').fadeIn();
-                                
-                                // $.ajaxSetup({
-                                //     jsonp: 'prefix',
-                                //     dataType: 'jsonp'
-                                // });
-                                
-                                $(form).ajaxSubmit({
-                                    target: '#contact-form-result',
-                                    
-                                    success: function() {
+                          
+                                try {
+                                  await new Promise((resolve, reject) => {
+                                    $.ajaxSetup({
+                                      jsonp: 'prefix',
+                                      dataType: 'text',
+                                    });
+                          
+                                    $(form).ajaxSubmit({
+                                      target: '#contact-form-result',
+                                      success: function() {
                                         $('.form-process').fadeOut();
                                         $('#template-contactform').find('.sm-form-control').val('');
-                                        
                                         $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
                                         SEMICOLON.widget.notifications($('#contact-form-result'));
-                                      
-                                    },
-                                    error: function (xhr, status, error) {
-                                    console.error("Form submission failed:", status, error);
-                                    $('.form-process').fadeOut();
-                                    // Display an error message or take other actions as needed
-                                    $('#contact-form-result').html('Form submission failed. Please try again later.');
-                                  
-          }
-                                });
-                            }
-                        });
-                    </script>
+                                        resolve();
+                                      },
+                                      error: function(xhr, status, error) {
+                                        console.error("Form submission failed:", status, error);
+                                        $('.form-process').fadeOut();
+                                        // Display an error message or take other actions as needed
+                                        $('#contact-form-result').html('Form submission failed. Please try again later.');
+                                        reject();
+                                      },
+                                    });
+                                  });
+                                } catch (error) {
+                                  console.error("An error occurred:", error);
+                                  // Handle any additional error handling if needed
+                                }
+                              },
+                            });
+                          </script>
+                          
 
                 </div><!-- Contact Form Overlay End -->
   
